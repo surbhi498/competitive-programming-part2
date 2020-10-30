@@ -15,3 +15,34 @@ Sample Input 2 :
  7
 Sample Output 2 :
 1
+#include <iostream>
+using namespace std;
+int count(int n){
+    
+static int count1 = 0;
+
+if((n/10) == 0)
+{
+   count1++;
+    return count1; 
+    
+}
+    
+else{
+    count1++;
+    count(n/10);
+    
+    
+}    
+    
+// return count1;   
+    
+}
+int main() {
+	//cout<<"GfG!";
+	int n;
+	cin>>n;
+	int gh = count(n);
+	cout<<gh;
+	return 0;
+}

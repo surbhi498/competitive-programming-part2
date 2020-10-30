@@ -17,3 +17,36 @@ Sample Input 2 :
  2 5
 Sample Output 2 :
 32
+#include<iostream>
+using namespace std;
+
+int power(int x,int n){
+    //int prod =1;
+    int bh;
+    if(n==0)
+    return 1;
+    else if(n==1)
+    return x;    
+    else{
+     if(n%2==0){   
+     bh = power(x,n/2) * power(x,n/2);
+     }
+     else{
+         
+     bh = x*power(x,n/2)*power(x,n/2);    
+         
+     }   
+    // prod *= bh;   
+        
+    }
+    
+   return bh; 
+    
+}
+int main() {
+	// Write your code here
+	int x,n;
+    cin>>x>>n;
+    int gh = power(x,n);
+    cout<<gh;
+}
